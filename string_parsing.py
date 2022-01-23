@@ -21,3 +21,17 @@ en_string = 'There is the house where my family lives'
 
 #Вызова функции
 letter_cout(en_string)
+
+def letter_max_count(string):
+    parsed_list = letter_cout(string)
+    analysis = {}
+    current_max = -1
+    for letter in parsed_list:
+        temp = parsed_list[letter]
+        if(temp >= current_max):
+            if(temp > current_max):
+                analysis.clear()
+                current_max = temp
+            analysis[letter] = temp;
+    return analysis 
+    
